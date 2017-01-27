@@ -283,9 +283,9 @@ public class Assignment {
         int val;
         
         int sum = 0;
-        for (int i = 1; i <= len; i = i + 1) {
+        for (int i = 1; i < len; i = i + 1) {
 
-            val = Integer.parseInt(String.valueOf(n).substring(0, i))   ;
+            val = Integer.parseInt(String.valueOf(n).substring(i,i + i))   ;
             sum = sum + val;
         }
         System.out.println("For " + n + ", the sum of all its digits is: " + sum + ".");
