@@ -54,16 +54,6 @@ public class Assignment {
      * If the salary is less than or equal to 8900, the Social Security Tax is 6.2% of the salary.
      * If the salary is more than 8900, the Social Security Tax is 6.2% of 106,800.
      */
-    /****
-    public static void main(String[] args) {
-    
-    Employee ee1 = new Employee("Ruby",25,Gender.FEMALE,5000);
-    Employee ee2 = new Employee("Frank",31,Gender.MALE,12000);
-    
-    System.out.println(socialSecurityTax(ee1));
-    System.out.println(socialSecurityTax(ee2));
-    }
-     ****/
     public double socialSecurityTax(Employee employee) {
         //write your code here
         //FL's code1:
