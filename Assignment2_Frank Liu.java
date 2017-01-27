@@ -258,17 +258,18 @@ public class Assignment {
             round up:Math.ceil(3.1)=4 
          *****/
         
-        for (int i = 2; i <= n; i = i + 1) {
+        for (int i = 2; i < n; i = i + 1) {
 
-            // FL's code2: if (n%i != 0 ); 
-            if (Math.floor(n/i) - Math.ceil(n/i) != 0){ 
+            // FL's code2: 
+            //Wrong code： the not eaale dont work, cause it would run any case happened during the loop. '!="if (n%i != 0 ); 
+            //Q: Why Math.ceil(7/2) run as 3.0?
+            if (n%i == 0){ 
                 return false;
             } 
-            return true;
+            
         }       
         //Q:Why I can't put the "return true" under the {} of "for"?
-        return false;
-                
+        return true;               
     }
     /**
      * Given a non-negative integer n, repeatedly add all its digits until the
