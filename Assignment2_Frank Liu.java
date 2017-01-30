@@ -34,7 +34,7 @@ class Employee {
         //Q:it's be updated as "double" when java run.
         double raiseSalary;
         //byPercent = 300;      
-        raiseSalary = salary * byPercent / 100; 
+        raiseSalary = salary * byPercent / 100; //rose: salary does not change
         
     }   
     
@@ -70,7 +70,7 @@ public class Assignment {
             
         //Output is a string, not a number. 
         System.out.println("The Social Security Tax for " + employee.name +", is $" + String.format("%.2f", socialSecurityTax1) +"."); 
-        //Q:do we have any code run if we have something after the line "return"?
+        //Q:do we have any code run if we have something after the line "return"? No.
         return socialSecurityTax1;
         
         /****    
@@ -258,7 +258,7 @@ public class Assignment {
             } 
             
         }       
-        //Q:Why I can't put the "return true" under the {} of "for"?
+        //Q:Why I can't put the "return true" under the {} of "for"? //rose: becuase if you did not meet the requirements of the for loop, there's nothing to return
         return true;               
     }
     /**
