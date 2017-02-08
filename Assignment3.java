@@ -150,24 +150,43 @@ public class Assignment3 {
     public static void encoding(String s) {
         //write your code here
         //FL's code:
-        int x = 0;
-        int y = 0;
-        for (int i = 0; i< s.length(); i++) {
-        	
-        	String a = s.substring(i, i+1);
-        	String b = s.substring(i+1, i+2);
-        	if ( s.substring(i, i+1).equals(s.substring(i+1, i+2) )) {
-        	} else {
-        		
-        		System.out.print(i+1-x + s.substring(i,i+1));
-        		x = x + i - y;
-        		y = i;	
+        int x = 0; 
+        for (int i = 0; i < s.length(); i++) {	
+        	while ( i < s.length() - 1) {
+        		String a = s.substring(i, i+1);
+        		String b = s.substring(i+1, i+2);
+	        	if ( s.substring(i, i+1).equals(s.substring(i+1, i+2) )) {
+	        	} else {		
+	        		System.out.print(i + 1 -x + s.substring(i,i+1));
+	        		x = i + 1; // to record the i when "else" run last time.      	  			
+	        	}
+	        	break;
+        	}      	
+        	while (i == s.length() - 1) {
+        		System.out.print(i + 1 -x + s.substring(i,i+1));
+        		break;	
         	}
-        }
+        }   	
     }
     public static String decoding(String s) {
         //write your code here
- 		//FL's code:
+ 	//FL's code:
+	for ( int i = 0; i < s.length(); i ++) {
+
+		while (2 * i < s.length()) {
+			Integer a = Integer.valueOf(s.substring(2 * i, 2 * i + 1));
+			String b = s.substring(2 * i + 1,2 * i+ 2);
+			int n = 0;
+				for (int u =0; u < a; u++) {
+					System.out.print(s.substring(2 * i + 1, 2 *i + 2));
+				}
+			i++;	  
+		}
+		while (2 * i == s.length()) {
+			System.out.print("");
+			i++;
+		} 		
+ 	}	    
     }
     
 	public static void main(String[] args) {
