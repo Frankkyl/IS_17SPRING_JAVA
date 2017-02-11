@@ -1,3 +1,7 @@
+/*
+score: 7 + 1(extra credit)
+comments: if you need the correct answer, email me or come to me on Monday or Friday
+*/
 /**
  * Created by Rose on 1/21/17.
  * Assignment for your lecture 2. Please finish all the questions under
@@ -54,7 +58,7 @@ public class Assignment {
      * If the salary is less than or equal to 8900, the Social Security Tax is 6.2% of the salary.
      * If the salary is more than 8900, the Social Security Tax is 6.2% of 106,800.
      */
-    public double socialSecurityTax(Employee employee) {
+    public double socialSecurityTax(Employee employee) {                //correct
         //write your code here
         //FL's code1:
         //Q:Why it's be added with "static" (public static double socialSecurityTax(Employee employee), when I try to run it?
@@ -111,7 +115,7 @@ public class Assignment {
      * If the employee is under 35, rate is 3% of salary; if the employee is between 35 and 50(inclusive), rate is 4% of salary;
      * If the employee is between 50 and 60(exclusive), rate is 5% of salary; If the employee is above 60, rate is 6% of salary.
      */
-    public double insuranceCoverage(Employee employee) {
+    public double insuranceCoverage(Employee employee) {            //correct
         //write your code here
         //FL's code1:
         //from big to small
@@ -179,7 +183,7 @@ public class Assignment {
      * For example, Alice's salary is 1000, John's salary is 500, Jenny's salary is 1200, you should print:
      * John Alice Jenny
      */
-    public static void sortSalary(Employee e1, Employee e2, Employee e3) {
+    public static void sortSalary(Employee e1, Employee e2, Employee e3) {            //correct
         //write your code here
         //FL's code1:
 
@@ -225,7 +229,7 @@ public class Assignment {
      * Do not change the input of this method.
      * Try to add a new method in Employee class: public void raiseSalary(double byPercent)
      */
-    public void tripleSalary(Employee employee) {
+    public void tripleSalary(Employee employee) {                       //correct
         //write your code here
         //FL's code:    
         //Mark:Same with SST, it's be added with "static"
@@ -239,7 +243,7 @@ public class Assignment {
     /**
      * Write a method to determine whether a number is prime
      */
-    public boolean isPrime(int n) {
+    public boolean isPrime(int n) {                            //correct
         //write your code here
         //FL's code1:
         /*****
@@ -266,7 +270,7 @@ public class Assignment {
      * result has only one digit. For example: Given n = 38, the process is
      * like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
      */
-    public int addDigits(int n) {
+    public int addDigits(int n) {                                  //wrong. If n is 12, your return is 2, but you should return 3
         //write your code here
         //FL's code1:
         int len = String.valueOf(n).length();
@@ -288,7 +292,7 @@ public class Assignment {
      * another prime factor 7. Note that 1 is typically treated as an ugly
      * number.
      */
-    public boolean isUgly(int n) {
+    public boolean isUgly(int n) {                              //wrong. Your program always return true.
         //write your code here
         //FL's code:
         /**** wrong code
@@ -323,6 +327,7 @@ public class Assignment {
      * There is no change after swap()! Do you know the reason why my swap failed?
      * Write your understanding of the reason and explain it.
      */
+    //correct
     /*
      write your understanding here.
      **FL's answer: It seems when u do the swap, u swap the name of two objects name not objects? (wrong answer)
