@@ -171,7 +171,26 @@ public class Assignment3 {
         	}
         }   	
     }
-	
+	public static String decoding(String s) {
+        //write your code here
+ 	//FL's code:
+	for ( int i = 0; i < s.length(); i ++) {
+
+		while (2 * i < s.length()) {
+			Integer a = Integer.valueOf(s.substring(2 * i, 2 * i + 1));
+			String b = s.substring(2 * i + 1,2 * i+ 2);
+			int n = 0;
+				for (int u =0; u < a; u++) {
+					System.out.print(s.substring(2 * i + 1, 2 *i + 2));
+				}
+			i++;	  
+		}
+		while (2 * i == s.length()) {
+			System.out.print("");
+			i++;
+		} 		
+ 	}	    
+    }
 //Extra Credit
     /**
      *Given an m x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise).
@@ -196,7 +215,7 @@ public class Assignment3 {
         int k = 0;
         int rt;
         for (int i = 0; i<s.length();i++) {
-            if((s.charAt(i).compareTo("(") || (s.charAt(i) == ")") { //Q: why it's show "||" not work, which one is corect?
+            if((s.substring(i,i+1)) == Character.toString(')') || (s.substring(i,i+1) == Character.toString('('))) { //Q:see strange thing in intellij
                 k++;
             }
         }
@@ -209,26 +228,7 @@ public class Assignment3 {
 
     return rt;
     }	
-    public static String decoding(String s) {
-        //write your code here
- 	//FL's code:
-	for ( int i = 0; i < s.length(); i ++) {
-
-		while (2 * i < s.length()) {
-			Integer a = Integer.valueOf(s.substring(2 * i, 2 * i + 1));
-			String b = s.substring(2 * i + 1,2 * i+ 2);
-			int n = 0;
-				for (int u =0; u < a; u++) {
-					System.out.print(s.substring(2 * i + 1, 2 *i + 2));
-				}
-			i++;	  
-		}
-		while (2 * i == s.length()) {
-			System.out.print("");
-			i++;
-		} 		
- 	}	    
-    }
+    
     
 	public static void main(String[] args) {
 	String s = "aaaabcccaa";
