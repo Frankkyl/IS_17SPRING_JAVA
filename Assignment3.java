@@ -40,7 +40,8 @@ public class Assignment3 {
         //Q:the output should be array {} not just a list of no.?
         //FL'code:
         //Q:The logic is: I setup another method to locate the first int which is not equal to "9", but why I also got the "method return" things?
-        int x = locateNine();      
+        int[] ln = new int[digits.length];
+	int x = locateNine(ln);      
         for( int i = 0; i < digits.length; i++) {
         	if( x == digits.length-1) {
     			System.out.print(digits[i] + " ");    			
@@ -57,14 +58,16 @@ public class Assignment3 {
         	}	
         } 
     }		   		
-	    public static void locateNine(int[] digits){
+	    public  int locateNine(int[] digits){
 	    	
-	    	int b;
+	    	int b = 0;
 	    	for ( int j = digits.length-1;j >= 0; j = j - 1) {
     			if( digits[j] != 9) {
-    				System.out.println(j);   				
+    				b=j;   				
     			}
-	    	}		
+	    	}
+		int c = b;  
+		return c;           
 	    }	   		
        		
        
@@ -168,6 +171,44 @@ public class Assignment3 {
         	}
         }   	
     }
+	
+//Extra Credit
+    /**
+     *Given an m x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise).
+     * For exmaple, given 1 2 3  , return 7 4 1
+     *                    4 5,6           8 5 2
+     *                    7,8,9           9 6 3
+     *tip: image could be a square or a rectangle.
+     */
+    public void rotate(int[][] matrix) {
+        //write your code here
+    }
+
+
+    /**
+     *Given a string containing just the characters '(', ')', return the count of valid parentheses. If the
+     * intput is not valid, return -1. A valid parentheses is "()". For example, given "(())", return 2;
+     * given "(()))", return -1.
+     */
+    public int countValidParentheses(String s) {
+        //write your code here
+        //FL's code:
+        int k = 0;
+        int rt;
+        for (int i = 0; i<s.length();i++) {
+            if((s.charAt(i).compareTo("(") || (s.charAt(i) == ")") { //Q: why it's show "||" not work, which one is corect?
+                k++;
+            }
+        }
+
+        if (k%2==0) {
+            rt= 2;
+        }else {
+            rt= -1;
+        }
+
+    return rt;
+    }	
     public static String decoding(String s) {
         //write your code here
  	//FL's code:
