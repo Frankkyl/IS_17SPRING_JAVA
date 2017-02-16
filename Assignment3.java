@@ -214,7 +214,7 @@ public class Assignment3 {
         //FL's code:
         int k = 0;
         int rt;
-        for (int i = 0; i<s.length();i++) {
+        /*for (int i = 0; i<s.length();i++) {
             if((s.substring(i,i+1)) == Character.toString(')') || (s.substring(i,i+1) == Character.toString('('))) { //Q:see strange thing in intellij
                 k++;
             }
@@ -224,15 +224,35 @@ public class Assignment3 {
             rt= 2;
         }else {
             rt= -1;
-        }
+        }*/
+    
+	int l = 0;    
+	for (int i = 0; i<s.length();i++) {
+            //System.out.println(s.substring(i,i+1));
+            //System.out.println(Character.toString(')'));
 
+            if((s.substring(i,i+1)).equals(Character.toString(')'))) {
+                k++;
+            } else if ((s.substring(i,i+1).equals(Character.toString('(')))) {
+                l++;
+
+            }
+        }
+        //System.out.println(k);
+        if (k == l) {
+            rt= k;
+        }else {
+            rt= -1;    
     return rt;
     }	
     
     
 	public static void main(String[] args) {
 	String s = "aaaabcccaa";
+	String c = "(((())))";	
 	encoding(s);
+	Assignment3 as = new Assignment3();
+        System.out.println(as.countValidParentheses(c));
 	/*int[] a = {1,3,2,9};
 	System.out.println(a[0]);
 	System.out.println(a[1]);
