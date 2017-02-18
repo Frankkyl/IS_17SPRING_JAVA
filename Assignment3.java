@@ -1,3 +1,8 @@
+/*
+First, come to find me on campus. I will answer your questions which were written in this assignment.
+Second, I could not give your a score. There are too many problems and sometimes you missunderstanding the requirements.
+Email me to make an appointment. I will go through every question with you.
+*/
 
 
 
@@ -17,7 +22,7 @@ public class Assignment3 {
      *  eg, given{1,2,3,4}, print{4,3,2,1}
      * @return 
      */
-    public static void reverseArray(int[] nums) {
+    public static void reverseArray(int[] nums) {               //correct
         
 	//write your code here
 	//FL' code:
@@ -35,7 +40,7 @@ public class Assignment3 {
      *  The digits are stored such that the most significant digit is at the head of the array.
      *  eg, given {1,2,9}, return{1,3,0}.
      */
-    public static void plusOne(int[] digits) {
+    public static void plusOne(int[] digits) {                   //wrong
         //write your code here
         //Q:the output should be array {} not just a list of no.?
         //FL'code:
@@ -77,7 +82,7 @@ public class Assignment3 {
      *  to isSubstring
      *  eg, "pineapple" is a rotation of "neapplepi"
      */
-    public boolean isRotation(String s1, String s2) {
+    public boolean isRotation(String s1, String s2) {        //wrong
 
 		if ( s1.length() == 0) {
 			return false;
