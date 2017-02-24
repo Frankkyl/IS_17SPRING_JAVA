@@ -52,7 +52,36 @@ public class Assignment3 {
      *  The digits are stored such that the most significant digit is at the head of the array.
      *  eg, given {1,2,9}, return{1,3,0}.
      */
-    public static void plusOne(int[] digits) {                   //wrong
+	public int[] plusOne(int[] digits) {
+        //write your code here: new solution
+	/** new solution:
+            1) return as int[], not int;loop based on int[i], not just i;
+            2) the loop should from right to left, cause when u start loop from left to right, each i would loop
+                from left to right, complexity (n-1)(n-2)(n-3)...1, but when u loop from right to left, once u see the no.!=0,
+                you could just break the loop by "return".
+            3) nums.length/2 it's int/int, so the result is still int, and rounding down.
+            4) another tip:if you could do the change from the original array, dont setup new array, cause u have to set value
+                for all members in new array; and this would need loop from i=0 to length; and normally u have to think about
+                i, i+1, and i+2, so as the corner case i+2>length
+            5) there are some solution setup as digit<9, so u would see the wrong case int nums[] = {1,2,9,18,17,26,19};
+                output is {1,3,0,18,17,26,20}, not {1,2,9,18,17,26,20};
+         **/
+        //int[] newDigits = new int[digits.length];
+		
+        for (int i = digits.length-1; i>=0; i--) {
+            if (digits[i] != 9) {
+                digits[i] = digits[i] + 1;
+                //System.out.println(Arrays.toString(newDigits));
+                return digits;
+            }else {
+                digits[i] = 0;
+                //System.out.println(Arrays.toString(newDigits));
+            }
+        }
+        int[] newDigits = new int[digits.length+1];
+        newDigits[0] = 1;
+        return newDigits;
+    /*public static void plusOne(int[] digits) {                   //wrong
         //write your code here
         //Q:the output should be array {} not just a list of no.?
         //FL'code:
@@ -87,7 +116,7 @@ public class Assignment3 {
 		return c;           
 	    }	   		
        		
-       
+   */    
     /**
      *  Assume you have a method isSubstring which checks if one word is a substring of another.
      *  Given two strings, s1 and s2, write a program to check if s2 is a rotation of s1, using only one call
