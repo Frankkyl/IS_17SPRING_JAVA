@@ -22,7 +22,19 @@ public class Assignment3 {
      *  eg, given{1,2,3,4}, print{4,3,2,1}
      * @return 
      */
-    public static void reverseArray(int[] nums) {               //correct
+	public void reverseArray(int[] nums) {               
+
+	//write your code here
+	//FL' new code:the former one is output with int, the new output is int[];
+	int temp = 0;
+	for (int i = 0; i<nums.length/2; i++) {
+
+	    temp = nums[nums.length-1-i];
+	    nums[nums.length-1-i] = nums[i];
+	    nums[i] = temp;
+	}
+	System.out.println(Arrays.toString(nums));		
+    /*public static void reverseArray(int[] nums) {               //correct
         
 	//write your code here
 	//FL' code:
@@ -31,7 +43,7 @@ public class Assignment3 {
 			System.out.print(b + " ");
 		}
 		//return nums; 
-	}		
+	}*/		
 	//Q:There some solution like sample show later, which is more based on array concept, is this normal or better solution? :for(int i=0,int J<arr.length-1;i<j;i++,j--) temp =a[i];a[i]=a[j];a[j]=temp;
  	//solution 2 could be array=>string, but the output would be string by print, so it's still good for this Q?
 	/**
