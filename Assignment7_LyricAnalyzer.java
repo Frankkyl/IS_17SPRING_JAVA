@@ -130,7 +130,28 @@ public class LyricAnalyzer {
     }
 
     public static String mostFrequentWord(HashMap<String, ArrayList<Integer>> map) {
-        return "mostF";
+         //same logic for displaylyricWord first
+        Map<String, ArrayList<Integer>> map2 = new TreeMap<>();
+        map2.putAll(map);
+        //output one by one
+        HashMap hm = new HashMap();
+        int mfSize = 0;
+        String mfStr="";
+        Iterator it = map2.keySet().iterator();
+        while (it.hasNext()) {
+            String key = it.next().toString();
+            ArrayList al = new ArrayList();
+            //System.out.println(map.get(key));
+            for (int i = 0; i < map2.get(key).size(); i++) {
+                al.add(map2.get(key).get(i));
+            }
+            hm.put(al,al.size());
+            if(al.size()>mfSize){
+                mfSize=al.size();
+                mfStr=key;
+            }
+        }
+        return mfStr;//Q:why out put is not WHAT or I? Most frequent word: HAVE
     }
 
     public static void main(String[] args) throws IOException {
