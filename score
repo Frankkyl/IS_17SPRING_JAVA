@@ -1,0 +1,7 @@
+extra credit: compile error
+generateString: Correct
+twoSum: correct
+reverse: correct
+singleNumber: wrong(-4): if input is {2,2,1}, you should return 1, but your answer is 2.
+
+score: 26 + 0
